@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./vendor/css/style.css">
+    <title>Maps</title>
+</head>
+
+<body>
+    <div class="site-main-container">
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d834511.5061169196!2d-105.02742570039946!3d35.211187128823184!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87185043e79852a9%3A0x46bf6e1a63359eba!2sNew%20Mexico%2C%20USA!5e0!3m2!1sen!2s!4v1688890072315!5m2!1sen!2s"
+            width="100%" height="600" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <div class="site-main-inner-container">
+            <div class="main-leftbar-container">
+                <img src="./assets/logo.svg" alt="">
+                <ul>
+                    <li>
+                        <img src="./assets/icons/home.svg" alt="">
+                        <p>Home</p>
+                    </li>
+                    <li>
+                        <img src="./assets/icons/search.svg" alt="">
+                        <p>Search</p>
+                    </li>
+                    <li>
+                        <img src="./assets/icons/saved.svg" alt="">
+                        <p>Saved</p>
+                    </li>
+                    <li>
+                        <img src="./assets/icons/stats.svg" alt="">
+                        <p>Statistics</p>
+                    </li>
+                    <li>
+                        <img src="./assets/icons/saved.svg" alt="">
+                        <p>Preferences</p>
+                    </li>
+                    <li>
+                        <img src="./assets/icons/addLocation.svg" alt="">
+                        <p>Add Location</p>
+                    </li>
+                </ul>
+                <button class="sidebar-login-btn">
+                    <img src="./assets/icons/user-login.svg" alt="">
+                    <span id="loginButton">Login</span>
+
+                </button>
+                <div id="container" class="main-login-container hidden">
+                    <img src="./assets/icons/cross.svg" class="login-cross" alt="">
+                    <div class="login-container">
+                        <div class="login-section-center">
+                            <div class="login-brand-logo-container">
+                                <img src="./assets/logo.svg" alt="">
+                                <h2>Locator</h2>
+                            </div>
+                            <h3>Welcome Back!</h3>
+                            <h4>Login to your Account</h4>
+                            <div class="login-input-container">
+                                <input type="text" placeholder="Email Address">
+                                <input type="password" placeholder="Password">
+                            </div>
+                            <div class="container-login">
+                                <button class="btn-login">Login</button>
+                                <button class="btn-login-gmail"><img src="./assets/icons/google.svg" alt=""><span>Login with
+                                    Google</span></button>
+                                <p>New to Locator? <a href="#">Create New Account</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Search Filter container -->
+            <div class="main-searchFilter-container">
+                <div class="searchFilter-section">
+                    <div class="search-bar">
+                        <input type="text" id="search-business" placeholder="Search by business"
+                            onclick="toggleDropdown('business')">
+                        <input type="text" id="search-location" placeholder="Search by location"
+                            onclick="toggleDropdown('location')">
+                        <select id="nearby-options">
+                            <option value="">What's Nearby</option>
+                            <option value="restaurants">Restaurants</option>
+                            <option value="hotels">Hotels</option>
+                            <option value="parks">Parks</option>
+                        </select>
+                    </div>
+
+                    <!-- <div id="dropdown-container"> -->
+                    <!-- Suggested options go here -->
+                    <!-- </div> -->
+
+                    <!-- <div id="search-results"> -->
+                    <!-- Display search results here -->
+                    <!-- </div> -->
+                </div>
+            </div>
+            <!-- Search Filter container -->
+
+        </div>
+    </div>
+    <!-- Scripts -->
+    <script src="./vendor/js/app.js"></script>
+
+</body>
+
+</html>
