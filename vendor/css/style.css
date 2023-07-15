@@ -1124,7 +1124,8 @@ input[type="radio"]:checked::before {
     font-style: normal;
     font-weight: 400;
 }
-.pagination-section{
+
+.pagination-section {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1163,3 +1164,101 @@ input[type="radio"]:checked::before {
 }
 
 /* AddLocation Products End*/
+
+/* AddLocation Cordinates Start*/
+.addLocation-coordinates-section-center {
+    padding-top: 60px;
+}
+
+.addLocation-coordinates-section-center h2 {
+    color: #000100;
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 700;
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+.addLocation-coordinates-input-container {
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    padding: 2.5em 0em 0em 0em;
+    width: 80%;
+}
+.addLocation-coordinates-input-section{
+    width: 100%;
+}
+.addLocation-coordinates-input-section:nth-child(odd){
+    margin-right: 20px;
+}
+.addLocation-coordinates-input-container h3 {
+    color: #000100;
+    font-size: 1.1rem;
+    font-style: normal;
+    font-weight: 700;
+    text-align: left;
+    margin-top: 20px;
+}
+
+.addLocation-coordinates-input-container input {
+    width: 100%;
+    font-size: .8rem;
+    font-style: normal;
+    font-weight: 700;
+    border: none;
+    border-radius: 10px;
+    background: #F1F5F9;
+    margin-top: 1em;
+    padding: 1.2rem 0rem 1.2rem 1rem;
+}
+
+.addLocation-coordinates-input-container input::placeholder {
+    color: #BDBDBD;
+
+}
+
+.addLocation-coordinates-input-container input:focus {
+    outline: #FD961B;
+    border: 2px solid #FD961B;
+}
+.addLocation-coordinates-img-container{
+    width: 80%;
+    margin: auto;
+    margin-top: 30px;
+}
+.addLocation-coordinates-img-container img{
+    width: 100%;
+}
+
+.save-coordinates-btn {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    border: none;
+    margin: auto;
+    margin-top: 20px;
+    padding: 1rem 0rem;
+    width: 300px;
+    border-radius: 10px;
+    background: #101010;
+    color: var(--primary-white);
+    transition: 0.5s ease-in-out;
+    cursor: pointer;
+    margin-bottom: 50px;
+    box-shadow: 0px 0px 0px 0px rgba(92, 92, 92, 0.10), 0px 2px 5px 0px rgba(92, 92, 92, 0.10), 0px 9px 9px 0px rgba(92, 92, 92, 0.09), 0px 21px 13px 0px rgba(92, 92, 92, 0.05), 0px 38px 15px 0px rgba(92, 92, 92, 0.01), 0px 59px 16px 0px rgba(92, 92, 92, 0.00);
+}
+
+.save-coordinates-btn:hover {
+    background: #222;
+
+}
+
+
+/* AddLocation Cordinates End*/
