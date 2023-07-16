@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./vendor/css/style.css">
+    <title>Maps</title>
+</head>
+
+<body>
+    <div class="site-main-container site-main-container-business">
+        <div class="site-main-inner-container">
+            <div class="main-leftbar-container">
+                <img src="./assets/logo.svg" alt="">
+                <ul>
+                    <li>
+                        <img src="./assets/icons/home.svg" alt="">
+                        <p>Home</p>
+                    </li>
+                    <li>
+                        <img src="./assets/icons/search.svg" alt="">
+                        <p>Search</p>
+                    </li>
+                    <li>
+                        <img src="./assets/icons/saved.svg" alt="">
+                        <p>Saved</p>
+                    </li>
+                    <li>
+                        <img src="./assets/icons/stats.svg" alt="">
+                        <p>Statistics</p>
+                    </li>
+                    <li>
+                        <img src="./assets/icons/saved.svg" alt="">
+                        <p>Preferences</p>
+                    </li>
+                    <li>
+                        <img src="./assets/icons/addLocation.svg" alt="">
+                        <p>Add Location</p>
+                    </li>
+                </ul>
+                <div class="userDone-login-container">
+                    <img src="./assets/img/user-login.jpg" alt="">
+                    <span class="user-span-name">John Doe</span>
+                </div>
+                <button class="sidebar-logout-btn">
+                    <img src="./assets/icons/logout.svg" alt=""><br>
+                    <span id="loginButton">Logout</span>
+                </button>
+            </div>
+            <div class="addLocationBusiness-rightbar-container ">
+                <h2>Your Business Location</h2>
+                <div class="addLocationProduct-sortby-container">
+                    <div class="addLocationProduct-sortby-adjust">
+                        <div class="addLocationProduct-dropdown">
+                            <div class="addLocationProduct-toggle" onclick="addLocationProducttoggleDropdown()">
+                                Sort By <span class="addLocationProduct-arrow"></span>
+                            </div>
+                            <div class="addLocationProduct-dropdown-menu">
+                                <p class="addLocationProduct-option" href="#">Highest Rating</p>
+                                <p class="addLocationProduct-option" href="#">Lowest Rating</p>
+                                <p class="addLocationProduct-option" href="#">Relevant</p>
+                                <p class="addLocationProduct-option" href="#">Newest</p>
+                                <p class="addLocationProduct-option" href="#">Earlist</p>
+                            </div>
+                        </div>
+                        <button class="addLocationProduct-sortby-remove-btn"><img src="./assets/icons/trash.svg"
+                                alt="">Remove Selected</button>
+                    </div>
+                    <div class="addLocationBusiness-dashboard-container">
+                        <div class="addLocationBusiness-dashboard-section">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th><input type="radio" name="selectAll" onclick="selectAllProducts()"></th>
+                                        <th>Business Name</th>
+                                        <th>Location</th>
+                                        <th>Contact Number</th>
+                                        <th>Email Address</th>
+                                        <th>Website</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><input type="radio" name="product"></td>
+                                        <td><span class="data">Cassin, Swift and Waelchi</span><input type="text"
+                                                class="edit-field" style="display: none;"></td>
+                                        <td><span class="data">0881 Reese Cape, Klockoborough,
+                                                Liechtenstein</span><input type="text" class="edit-field"
+                                                style="display: none;"></td>
+                                        <td><span class="data">1-890-613-5229</span><input type="text"
+                                                class="edit-field" style="display: none;"></td>
+                                        <td><span class="data">Billy27@yahoo.com</span><input type="text"
+                                                class="edit-field" style="display: none;"></td>
+                                        <td><span class="data">https://seth.net</span><input type="text"
+                                                class="edit-field" style="display: none;"></td>
+                                        <td class="dashboard-btn-container">
+                                            <button class="edit-button" onclick="editRow(this)"><img
+                                                    src="./assets/icons/edit-icon.svg" alt="">Edit</button>
+                                            <button class="save-button" onclick="saveRow(this)"
+                                                style="display: none;">Save</button>
+                                            <button class="remove-button" onclick="removeProduct(this)"><img
+                                                    src="./assets/icons/trash.svg" alt="">Remove</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="radio" name="product"></td>
+                                        <td><span class="data">Cassin, Swift and Waelchi</span><input type="text"
+                                                class="edit-field" style="display: none;"></td>
+                                        <td><span class="data">0881 Reese Cape, Klockoborough,
+                                                Liechtenstein</span><input type="text" class="edit-field"
+                                                style="display: none;"></td>
+                                        <td><span class="data">1-890-613-5229</span><input type="text"
+                                                class="edit-field" style="display: none;"></td>
+                                        <td><span class="data">Billy27@yahoo.com</span><input type="text"
+                                                class="edit-field" style="display: none;"></td>
+                                        <td><span class="data">https://seth.net</span><input type="text"
+                                                class="edit-field" style="display: none;"></td>
+                                        <td class="dashboard-btn-container">
+                                            <button class="edit-button" onclick="editRow(this)"><img
+                                                    src="./assets/icons/edit-icon.svg" alt="">Edit</button>
+                                            <button class="save-button" onclick="saveRow(this)"
+                                                style="display: none;">Save</button>
+                                            <button class="remove-button" onclick="removeProduct(this)"><img
+                                                    src="./assets/icons/trash.svg" alt="">Remove</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="radio" name="product"></td>
+                                        <td><span class="data">Cassin, Swift and Waelchi</span><input type="text"
+                                                class="edit-field" style="display: none;"></td>
+                                        <td><span class="data">0881 Reese Cape, Klockoborough,
+                                                Liechtenstein</span><input type="text" class="edit-field"
+                                                style="display: none;"></td>
+                                        <td><span class="data">1-890-613-5229</span><input type="text"
+                                                class="edit-field" style="display: none;"></td>
+                                        <td><span class="data">Billy27@yahoo.com</span><input type="text"
+                                                class="edit-field" style="display: none;"></td>
+                                        <td><span class="data">https://seth.net</span><input type="text"
+                                                class="edit-field" style="display: none;"></td>
+                                        <td class="dashboard-btn-container">
+                                            <button class="edit-button" onclick="editRow(this)"><img
+                                                    src="./assets/icons/edit-icon.svg" alt="">Edit</button>
+                                            <button class="save-button" onclick="saveRow(this)"
+                                                style="display: none;">Save</button>
+                                            <button class="remove-button" onclick="removeProduct(this)"><img
+                                                    src="./assets/icons/trash.svg" alt="">Remove</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="radio" name="product"></td>
+                                        <td><span class="data">Cassin, Swift and Waelchi</span><input type="text"
+                                                class="edit-field" style="display: none;"></td>
+                                        <td><span class="data">0881 Reese Cape, Klockoborough,
+                                                Liechtenstein</span><input type="text" class="edit-field"
+                                                style="display: none;"></td>
+                                        <td><span class="data">1-890-613-5229</span><input type="text"
+                                                class="edit-field" style="display: none;"></td>
+                                        <td><span class="data">Billy27@yahoo.com</span><input type="text"
+                                                class="edit-field" style="display: none;"></td>
+                                        <td><span class="data">https://seth.net</span><input type="text"
+                                                class="edit-field" style="display: none;"></td>
+                                        <td class="dashboard-btn-container">
+                                            <button class="edit-button" onclick="editRow(this)"><img
+                                                    src="./assets/icons/edit-icon.svg" alt="">Edit</button>
+                                            <button class="save-button" onclick="saveRow(this)"
+                                                style="display: none;">Save</button>
+                                            <button class="remove-button" onclick="removeProduct(this)"><img
+                                                    src="./assets/icons/trash.svg" alt="">Remove</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="radio" name="product"></td>
+                                        <td><span class="data">Cassin, Swift and Waelchi</span><input type="text"
+                                                class="edit-field" style="display: none;"></td>
+                                        <td><span class="data">0881 Reese Cape, Klockoborough,
+                                                Liechtenstein</span><input type="text" class="edit-field"
+                                                style="display: none;"></td>
+                                        <td><span class="data">1-890-613-5229</span><input type="text"
+                                                class="edit-field" style="display: none;"></td>
+                                        <td><span class="data">Billy27@yahoo.com</span><input type="text"
+                                                class="edit-field" style="display: none;"></td>
+                                        <td><span class="data">https://seth.net</span><input type="text"
+                                                class="edit-field" style="display: none;"></td>
+                                        <td class="dashboard-btn-container">
+                                            <button class="edit-button" onclick="editRow(this)"><img
+                                                    src="./assets/icons/edit-icon.svg" alt="">Edit</button>
+                                            <button class="save-button" onclick="saveRow(this)"
+                                                style="display: none;">Save</button>
+                                            <button class="remove-button" onclick="removeProduct(this)"><img
+                                                    src="./assets/icons/trash.svg" alt="">Remove</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="radio" name="product"></td>
+                                        <td><span class="data">Cassin, Swift and Waelchi</span><input type="text"
+                                                class="edit-field" style="display: none;"></td>
+                                        <td><span class="data">0881 Reese Cape, Klockoborough,
+                                                Liechtenstein</span><input type="text" class="edit-field"
+                                                style="display: none;"></td>
+                                        <td><span class="data">1-890-613-5229</span><input type="text"
+                                                class="edit-field" style="display: none;"></td>
+                                        <td><span class="data">Billy27@yahoo.com</span><input type="text"
+                                                class="edit-field" style="display: none;"></td>
+                                        <td><span class="data">https://seth.net</span><input type="text"
+                                                class="edit-field" style="display: none;"></td>
+                                        <td class="dashboard-btn-container">
+                                            <button class="edit-button" onclick="editRow(this)"><img
+                                                    src="./assets/icons/edit-icon.svg" alt="">Edit</button>
+                                            <button class="save-button" onclick="saveRow(this)"
+                                                style="display: none;">Save</button>
+                                            <button class="remove-button" onclick="removeProduct(this)"><img
+                                                    src="./assets/icons/trash.svg" alt="">Remove</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="radio" name="product"></td>
+                                        <td><span class="data">Cassin, Swift and Waelchi</span><input type="text"
+                                                class="edit-field" style="display: none;"></td>
+                                        <td><span class="data">0881 Reese Cape, Klockoborough,
+                                                Liechtenstein</span><input type="text" class="edit-field"
+                                                style="display: none;"></td>
+                                        <td><span class="data">1-890-613-5229</span><input type="text"
+                                                class="edit-field" style="display: none;"></td>
+                                        <td><span class="data">Billy27@yahoo.com</span><input type="text"
+                                                class="edit-field" style="display: none;"></td>
+                                        <td><span class="data">https://seth.net</span><input type="text"
+                                                class="edit-field" style="display: none;"></td>
+                                        <td class="dashboard-btn-container">
+                                            <button class="edit-button" onclick="editRow(this)"><img
+                                                    src="./assets/icons/edit-icon.svg" alt="">Edit</button>
+                                            <button class="save-button" onclick="saveRow(this)"
+                                                style="display: none;">Save</button>
+                                            <button class="remove-button" onclick="removeProduct(this)"><img
+                                                    src="./assets/icons/trash.svg" alt="">Remove</button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <div class="pagination">
+                                <span class="pagination-total-span">Total: <strong>100</strong> records</span>
+                                <div class="pagination-right-section">
+                                    <div class="pagination-pages-number">
+                                        <span>10 / page</span>
+                                    </div>
+                                    <div class="pagination-section">
+                                        <span class="arrow">&lsaquo;</span>
+                                        <span class="page active">1</span>
+                                        <span class="page">2</span>
+                                        <span class="page">3</span>
+                                        <span class="page">4</span>
+                                        <span class="page">5</span>
+                                        <span class="page">...</span>
+                                        <span class="page">20</span>
+                                        <!-- Add more page numbers as needed -->
+                                        <span class="arrow">&rsaquo;</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Scripts -->
+    <script src="./vendor/js/app.js"></script>
+</body>
+
+</html>

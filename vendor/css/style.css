@@ -79,7 +79,6 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* justify-content: center; */
 }
 
 .main-leftbar-container img {
@@ -1178,13 +1177,6 @@ input[type="radio"]:checked::before {
     text-align: center;
 }
 
-
-
-
-
-
-
-
 .addLocation-coordinates-input-container {
     display: flex;
     justify-content: space-between;
@@ -1192,12 +1184,15 @@ input[type="radio"]:checked::before {
     padding: 2.5em 0em 0em 0em;
     width: 80%;
 }
-.addLocation-coordinates-input-section{
+
+.addLocation-coordinates-input-section {
     width: 100%;
 }
-.addLocation-coordinates-input-section:nth-child(odd){
+
+.addLocation-coordinates-input-section:nth-child(odd) {
     margin-right: 20px;
 }
+
 .addLocation-coordinates-input-container h3 {
     color: #000100;
     font-size: 1.1rem;
@@ -1228,12 +1223,14 @@ input[type="radio"]:checked::before {
     outline: #FD961B;
     border: 2px solid #FD961B;
 }
-.addLocation-coordinates-img-container{
+
+.addLocation-coordinates-img-container {
     width: 80%;
     margin: auto;
     margin-top: 30px;
 }
-.addLocation-coordinates-img-container img{
+
+.addLocation-coordinates-img-container img {
     width: 100%;
 }
 
@@ -1260,5 +1257,151 @@ input[type="radio"]:checked::before {
 
 }
 
-
 /* AddLocation Cordinates End*/
+
+/* Business_Location End */
+.addLocationBusiness-rightbar-container {
+    width: 100vw;
+    padding: 3rem 2.5rem 3rem 2.5rem;
+}
+
+.addLocationBusiness-rightbar-container h2 {
+    color: #000100;
+    font-size: 1.8rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.addLocationBusiness-dashboard-container {}
+
+.addLocationBusiness-dashboard-section {
+    border: 1px solid #BDBDBD;
+    border-radius: 16px;
+    margin-top: 15px;
+    overflow: hidden;
+}
+
+.site-main-container-business {
+    overflow: auto;
+}
+
+/* Business_Location Start */
+
+
+/* States_Selected Start */
+.main-selectedStates-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-column-gap: 30px;
+    grid-row-gap: 30px;
+    padding-top: 40px;
+}
+
+.main-selectedStates-container a {
+    position: relative;
+}
+
+.stats-box-selected {
+    padding: 1.5rem;
+    border: 3px solid #F1F5F9;
+    border-radius: 1.5rem;
+    background: #FFF;
+    transition: 0.5s ease-in-out;
+}
+
+.stats-box-selected:hover {
+    background-color: #F1F5F9;
+    box-shadow: 0px 0px 0px 0px rgba(92, 92, 92, 0.10), 0px 2px 5px 0px rgba(92, 92, 92, 0.10), 0px 9px 9px 0px rgba(92, 92, 92, 0.09), 0px 21px 13px 0px rgba(92, 92, 92, 0.05), 0px 38px 15px 0px rgba(92, 92, 92, 0.01), 0px 59px 16px 0px rgba(92, 92, 92, 0.00);
+}
+
+.stats-box-selected span {
+    display: inline-flex;
+    padding: .9rem;
+    border-radius: 1rem;
+    background: #FFEDD8;
+}
+
+.stats-box-selected span img {}
+
+.stats-box-selected h5 {
+    color: #FFFFFF;
+    font-weight: 700;
+}
+
+.statesSelected {
+    border-radius: 1.5rem;
+    background: #101010;
+    box-shadow: 0px 0px 0px 0px rgba(92, 92, 92, 0.10), 0px 2px 5px 0px rgba(92, 92, 92, 0.10), 0px 9px 9px 0px rgba(92, 92, 92, 0.09), 0px 21px 13px 0px rgba(92, 92, 92, 0.05), 0px 38px 15px 0px rgba(92, 92, 92, 0.01), 0px 59px 16px 0px rgba(92, 92, 92, 0.00);
+}
+
+.statesSelected-cross {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+}
+
+/* States_Selected End */
+
+/* States_dashboard2 Start */
+.main-statsDashboard-container {
+    padding-top: 40px;
+
+}
+
+.main-statsDashboard-container h6 {
+    color: #000100;
+    font-size: 1.1rem;
+    font-style: normal;
+    font-weight: 700;
+    margin-top: 20px;
+}
+
+.statsDashboard-business-Selected-section {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 20px;
+    grid-row-gap: 30px;
+    padding-top: 25px;
+}
+
+.dashboard-selected {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    border-radius: 16px;
+    background-color: #101010;
+}
+.dashboard-selected span{
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--primary-white);
+}
+.dashboard-selected img{}
+
+.statsDashboard-business-section {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 20px;
+    grid-row-gap: 30px;
+    padding-top: 25px;
+}
+
+.statsDashboard-business-input-container input {
+    width: 100%;
+    font-size: .8rem;
+    font-style: normal;
+    font-weight: 700;
+    border: none;
+    border: 2px solid #F1F5F9;
+    border-radius: 10px;
+    background: #F1F5F9;
+    margin-top: 1em;
+    padding: 1.2rem 0rem 1.2rem 1rem;
+}
+.statsDashboard-business-input-container input:focus{
+    outline: none;
+    border: 2px solid var(--primary-color);
+}
+/* States_dashboard2 End */
