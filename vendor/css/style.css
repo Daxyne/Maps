@@ -1622,13 +1622,11 @@ input[type="radio"]:checked::before {
 }
 
 .addBusiness-card-container {
-    /* float: right; */
     width: 45%;
     padding: 1em 0em 0em 3em;
-    /* border: 1px solid red; */
 }
 
-.asd {
+.main-addBusinessLocation-container-gaint {
     display: flex;
 }
 
@@ -1715,4 +1713,56 @@ input[type="radio"]:checked::before {
     padding-left: 10px;
 }
 
+/* Add Business Location End */
+
+
+/* Add Business Location End */
+.main-rightbar-dashboardSetting-container {
+    width: 88.8vw;
+    padding: 3rem 2rem 3rem 2rem;
+    border: 1px solid red;
+}
+.main-rightbar-dashboardSetting-container h2 {
+    color: #000100;
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 700;
+    margin: 2em 0em .8em 0em;
+}
+
+
+.main-rightbar-dashboardSetting-container ul{
+    padding-left: 5px;
+}
+.main-rightbar-dashboardSetting-container ul li{
+    margin-bottom: 20px;
+}
+.checkbox-container {
+    display: flex;
+    align-items: center;
+}
+
+.checkbox {
+    width: 18px;
+    height: 18px;
+    border: 2px solid black;
+    margin-right: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    position: relative;
+    transition: background-color 0.3s;
+}
+
+.checkbox.checked {
+    background-color: black;
+}
+
+.checkbox.checked:after {
+    content: '✔';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+}
 /* Add Business Location End */

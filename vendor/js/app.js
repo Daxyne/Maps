@@ -1,3 +1,12 @@
+/* DashboardSetting Checkbox Start */
+var checkboxes = document.querySelectorAll('.checkbox');
+checkboxes.forEach(function (checkbox) {
+  checkbox.addEventListener('click', function () {
+    this.classList.toggle('checked');
+  });
+});
+/* DashboardSetting Checkbox End */
+
 /* addLocationProduct Start */
 // function addLocationProducttoggleDropdown() {
 //   var dropdownToggle = document.querySelector('.addLocationProduct-toggle');
@@ -25,8 +34,8 @@ dropdownOptions.forEach(function (option) {
 function selectAllProducts() {
   const productRadios = document.getElementsByName("product");
   const selectAllRadio = document.getElementsByName("selectAll")[0];
-  
-  productRadios.forEach(function(radio) {
+
+  productRadios.forEach(function (radio) {
     radio.checked = selectAllRadio.checked;
   });
 }
@@ -43,7 +52,7 @@ function editRow(button) {
     editFields[i].style.display = "inline-block";
     editFields[i].value = dataFields[i].textContent;
   }
-  
+
   editButton.style.display = "none";
   saveButton.style.display = "inline-block";
 }
@@ -60,7 +69,7 @@ function saveRow(button) {
     dataFields[i].style.display = "inline-block";
     editFields[i].style.display = "none";
   }
-  
+
   editButton.style.display = "inline-block";
   saveButton.style.display = "none";
 }
