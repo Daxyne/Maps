@@ -1722,6 +1722,7 @@ input[type="radio"]:checked::before {
     padding: 3rem 2rem 3rem 2rem;
     border: 1px solid red;
 }
+
 .main-rightbar-dashboardSetting-container h2 {
     color: #000100;
     font-size: 1.5rem;
@@ -1731,12 +1732,14 @@ input[type="radio"]:checked::before {
 }
 
 
-.main-rightbar-dashboardSetting-container ul{
+.main-rightbar-dashboardSetting-container ul {
     padding-left: 5px;
 }
-.main-rightbar-dashboardSetting-container ul li{
+
+.main-rightbar-dashboardSetting-container ul li {
     margin-bottom: 20px;
 }
+
 .checkbox-container {
     display: flex;
     align-items: center;
@@ -1745,7 +1748,7 @@ input[type="radio"]:checked::before {
 .checkbox {
     width: 18px;
     height: 18px;
-    border: 2px solid black;
+    border: 3px solid black;
     margin-right: 10px;
     border-radius: 5px;
     cursor: pointer;
@@ -1765,4 +1768,212 @@ input[type="radio"]:checked::before {
     transform: translate(-50%, -50%);
     color: white;
 }
+
+/* Add Business Location End */
+
+/* Add Business Location Start */
+.main-rightbar-userProfile-container {
+    width: 88.8vw;
+    padding: 6rem 8% 3rem 8%;
+}
+
+.userProfile-detail-container {
+    display: flex;
+    width: 57%;
+}
+
+.userProfile-img-container {
+    display: flex;
+    border-radius: 40px;
+    border: 5px solid #FD961B;
+}
+
+.userProfile-img-container img {
+    display: flex;
+    border-radius: 40px;
+}
+
+.userProfile-text-container {
+    padding-left: 35px;
+}
+
+.userProfile-text-container h3 {
+    color: #000100;
+    font-size: 1.3rem;
+    font-style: normal;
+    font-weight: 700;
+}
+
+.userProfile-text-container h5 {
+    color: #828282;
+    font-size: 0.9rem;
+    font-style: normal;
+    font-weight: 400;
+}
+
+.userProfile-level-container {
+    margin-top: 15px;
+    padding: 15px 20px;
+    border-radius: 16px;
+    background: #F1F5F9;
+}
+
+.userProfile-level-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.userProfile-level-section h6 {
+    color: #000100;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+}
+
+.userProfile-level-section p {
+    color: #4F4F4F;
+    font-size: 12.003px;
+    font-style: normal;
+    font-weight: 700;
+}
+
+.userProfile-level-review {
+    display: flex;
+    align-items: self-start;
+    justify-content: flex-start;
+    padding-top: 5px;
+}
+
+.userProfile-level-review img {
+    margin-top: 4px;
+    margin-right: 8px;
+}
+
+.userProfile-level-review p {
+    color: #000100;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+}
+
+.userProfile-level-line-container {
+    position: relative;
+    height: 10px;
+    border-radius: 10px;
+    margin-top: 5px;
+    background: var(--primary-white);
+}
+
+.userProfile-level-line-span {
+    width: 150px;
+    height: 10px;
+    position: absolute;
+    border-radius: 10px;
+    background: #FDCB1B;
+}
+
+.userProfile-location-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 70px;
+    margin-top: 40px;
+}
+
+.userProfile-location-box {
+    border-radius: 16px;
+    padding: 14px 20px;
+    background: #FFFFFF;
+    border: 1px solid #CDCFCC;
+    box-shadow: 0px 0px 0px 0px rgba(130, 130, 130, 0.10), 0px 4px 9px 0px rgba(130, 130, 130, 0.10), 0px 17px 17px 0px rgba(130, 130, 130, 0.09), 0px 38px 23px 0px rgba(130, 130, 130, 0.05), 0px 68px 27px 0px rgba(130, 130, 130, 0.01), 0px 106px 30px 0px rgba(130, 130, 130, 0.00);
+}
+
+.userProfile-location-txt {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.userProfile-location-txt h3 {
+    color: #000100;
+    font-size: 1.2rem;
+    font-style: normal;
+    font-weight: 700;
+}
+
+.userProfile-location-txt a {
+    color: #FD961B;
+    font-size: 0.9rem;
+    font-style: normal;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.userProfile-business-location-container {
+    display: flex;
+    padding: 16px;
+    margin-top: 16px;
+    border-radius: 16px;
+    background: #F2F3EE;
+}
+
+.userProfile-business-location-img-container {
+    border-radius: 12px;
+    width: 150px;
+    height: 77px;
+}
+
+.userProfile-business-location-img-container img {
+    border-radius: 12px;
+}
+
+.userProfile-business-location-detail-container {
+    padding-left: 20px;
+}
+
+.userProfile-business-location-detail-container h5 {
+    color: #000100;
+    font-size: 0.95rem;
+    font-style: normal;
+    font-weight: 700;
+}
+
+.userProfile-business-location-detail-container h6 {
+    color: #828282;
+    font-size: 0.9rem;
+    font-style: normal;
+    font-weight: 300;
+}
+
+.userProfile-business-location-rating-container {
+    display: flex;
+    align-items: center;
+    padding-top: 3px;
+}
+
+.userProfile-business-location-rating-container span {
+    color: #828282;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    margin-right: 8px;
+}
+
+.userProfile-business-location-rating-star {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.userProfile-business-location-rating-star img {
+    margin-right: 3px;
+}
+
+.userProfile-business-location-detail-container p {
+    color: #828282;
+    font-size: 0.9rem;
+    font-style: normal;
+    font-weight: 400;
+}
+
 /* Add Business Location End */
