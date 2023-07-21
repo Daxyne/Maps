@@ -141,18 +141,15 @@ body {
 .main-searchFilter-container {
     margin-left: 1em;
     padding-top: 10px;
+
 }
 
-.searchFilter-section {
-    /* display: flex; */
-    /* align-items: center; */
-    /* justify-content: center; */
-    background-color: var(--primary-white);
-    border-radius: 10px;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-}
+.searchFilter-section {}
 
 .search-bar {
+    background-color: var(--primary-white);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    border-radius: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1977,3 +1974,187 @@ input[type="radio"]:checked::before {
 }
 
 /* Add Business Location End */
+
+
+
+
+
+/* Profile_Location Start */
+.Profile_Location-input {
+    padding-right: 10rem !important;
+}
+
+.Profile_Location-input-line {
+    height: 30px;
+    width: 1px;
+    background: #F2F3EE;
+}
+
+.Profile_Location-dropdown {
+    width: 200px;
+    position: relative;
+    display: inline-block;
+    margin-right: 50px;
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    margin: 0em;
+    padding: 0rem 1.5rem 0rem 0rem;
+}
+
+.Profile_Location-toggle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    padding: 1.2rem 0rem 1.2rem 1rem;
+    color: #000100;
+    font-size: 0.9rem;
+    font-style: normal;
+    font-weight: 400;
+}
+
+.Profile_Location-arrow {
+    display: inline-block;
+    width: 0.4em;
+    height: 0.4em;
+    border-right: 2px solid #000100;
+    border-bottom: 2px solid #000100;
+    transform: rotate(45deg);
+    margin-left: 40px;
+    transition: transform 0.2s ease-in-out;
+}
+
+.Profile_Location-toggle.open .Profile_Location-arrow {
+    transform: rotate(-135deg);
+}
+
+.Profile_Location-dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0px;
+    width: 100%;
+    color: #000100;
+    font-size: 13px;
+    font-weight: 400;
+    font-style: normal;
+    background-color: #fff;
+    border-top: none;
+    border-radius: 12px;
+    margin-top: 5px;
+    /* padding: 0.5em; */
+    max-height: 0;
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: 0px 0px 0px 0px rgba(92, 92, 92, 0.10), 0px 2px 5px 0px rgba(92, 92, 92, 0.10), 0px 9px 9px 0px rgba(92, 92, 92, 0.09), 0px 21px 13px 0px rgba(92, 92, 92, 0.05), 0px 38px 15px 0px rgba(92, 92, 92, 0.01), 0px 59px 16px 0px rgba(92, 92, 92, 0.00);
+    transition: 0.3s ease-in-out;
+}
+
+.Profile_Location-toggle.open+.Profile_Location-dropdown-menu {
+    max-height: 350px;
+    overflow-y: none;
+    padding: 0.5em;
+}
+
+.Profile_Location-option {
+    display: flex;
+    padding: 10px 10px 10px 14px;
+    border-radius: 8px;
+    color: #000100;
+    font-size: 1rem;
+    text-decoration: none;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.Profile_Location-option:hover {
+    background-color: #f1f1f1;
+}
+
+.Profile_Location-option img {
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+}
+
+
+
+
+.profile-business-location-main-container {
+    margin-top: 10px;
+    padding: 14px;
+    border-radius: 1rem;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 0px 0px rgba(130, 130, 130, 0.10), 0px 4px 9px 0px rgba(130, 130, 130, 0.10), 0px 17px 17px 0px rgba(130, 130, 130, 0.09), 0px 38px 23px 0px rgba(130, 130, 130, 0.05), 0px 68px 27px 0px rgba(130, 130, 130, 0.01), 0px 106px 30px 0px rgba(130, 130, 130, 0.00);
+}
+
+.profile-business-location-img-conatiner {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+}
+
+.profile-business-location-img-conatiner img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+
+}
+
+.profile-business-detail-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+
+.profile-business-detail-section {
+    position: relative;
+}
+
+.profile-business-detail-section h5 {
+    color: #000100;
+    font-size: 0.9rem;
+    font-style: normal;
+    font-weight: 700;
+    padding-right: 10px;
+}
+
+.verified-orange {
+    position: absolute;
+    right: -15px;
+    top: 0;
+}
+
+.userProfile-business-location-rating-container {}
+
+.profile-business-detail-share-section {
+    display: flex;
+    align-items: self-start;
+    justify-content: end;
+}
+
+.profile-business-detail-share-section a {
+    display: flex;
+    padding: 10px 18px;
+    justify-content: center;
+    align-items: center;
+    color: #FFFFFF;
+    font-size: 0.9rem;
+    font-style: normal;
+    font-weight: 100;
+    border-radius: 8px;
+    background: #101010;
+    box-shadow: 0px 0px 0px 0px rgba(92, 92, 92, 0.10), 0px 2px 5px 0px rgba(92, 92, 92, 0.10), 0px 9px 9px 0px rgba(92, 92, 92, 0.09), 0px 21px 13px 0px rgba(92, 92, 92, 0.05), 0px 38px 15px 0px rgba(92, 92, 92, 0.01), 0px 59px 16px 0px rgba(92, 92, 92, 0.00);
+}
+
+.profile-business-detail-share-section span {
+    display: flex;
+    padding: 5px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 12px;
+    border: 2px solid #101010;
+    margin-left: 10px;
+}
+
+.profile-business-detail-share-section span img {}
+
+/* Profile_Location End */
