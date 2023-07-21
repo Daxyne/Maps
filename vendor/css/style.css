@@ -141,7 +141,20 @@ body {
 .main-searchFilter-container {
     margin-left: 1em;
     padding-top: 10px;
+    width: 600px;
+    height: 145.5vh !important;
+    border-radius: 16px;
+}
 
+.main-searchFilter-container {
+    overflow-y: scroll;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    /* background-color: var(--primary-white); */
+}
+
+.main-searchFilter-container::-webkit-scrollbar {
+    width: 0;
 }
 
 .searchFilter-section {}
@@ -752,6 +765,7 @@ select {
 }
 
 .addNewItem-box-text-container {
+    position: relative;
     padding-left: 1em;
 }
 
@@ -2156,5 +2170,268 @@ input[type="radio"]:checked::before {
 }
 
 .profile-business-detail-share-section span img {}
+
+
+.profile-location-tabs-container {
+    padding-top: 60px;
+}
+
+.tab {
+    overflow: hidden;
+}
+
+.tab button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 35px;
+    transition: 0.3s;
+    font-size: 17px;
+    color: #4B4B4B;
+    font-size: 1.2rem;
+    font-style: normal;
+    font-weight: 300;
+}
+
+.tab button:hover {
+    background-color: #eeeeee;
+    border-radius: 8px 8px 0px 0px;
+
+}
+
+.tab button.active {
+    background-color: #FFDDB5;
+    border-radius: 8px 8px 0px 0px;
+    border-bottom: 2px solid#FD961B;
+    color: #000100;
+}
+
+.tabcontent {
+    display: none;
+}
+
+.tabcontent p {
+    color: #000100;
+    font-size: 0.9rem;
+    font-style: normal;
+    line-height: 18px;
+    font-weight: 400;
+}
+
+.profile-location-ul {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 20px;
+    padding: 2em 0em 0em 0em;
+}
+
+.profile-location-ul li {
+    display: flex;
+    padding-bottom: 1rem;
+}
+
+
+.profile-location-card-socail-container {
+    padding-top: 2em;
+    padding-left: 1em;
+}
+
+.profile-location-card-socail-container ul {}
+
+.profile-location-card-socail-container ul li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px !important;
+    padding: 5px;
+    transition: 0.5s ease-in-out;
+    border-radius: 5px;
+}
+
+.profile-location-card-socail-container ul li:hover {
+    background-color: #eeeeee;
+}
+
+.profile-location-card-socail-container ul li img {
+    display: flex;
+}
+
+.profile-location-card-socail-container ul li a {
+    display: flex;
+    color: #000100;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    margin-left: 12px;
+}
+
+.profile-location-gallery-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 15px;
+    grid-row-gap: 15px;
+    margin-top: 20px;
+}
+
+.profile-location-gallery-container img {}
+
+.tabcontent .addNewItem-box {
+    margin-top: 20px;
+}
+
+.profile-location-portfolio-buy-btn {
+    position: absolute;
+    right: 0;
+    top: 0;
+    color: var(--primary-color);
+    font-weight: 600;
+    padding: 8px 20px;
+    border-radius: 8px;
+    border: 2px solid var(--primary-color);
+    background-color: transparent;
+    transition: 0.5s ease-in-out;
+}
+
+.profile-location-portfolio-buy-btn:hover {
+    color: var(--primary-white);
+    background-color: var(--primary-color);
+}
+
+.profile-location-reviews-rating-main-container {}
+
+.profile-location-reviews-rating-main-Innercontainer {
+    display: flex !important;
+    justify-content: space-between;
+}
+
+.profile-location-reviews-rating-container {
+    width: 325px;
+    padding: 20px 0px;
+}
+
+.profile-location-reviews-rating-section {
+    display: flex;
+    align-items: center;
+}
+
+.profile-location-reviews-rating-container span {}
+
+.profile-location-reviews-rating-line-container {
+    padding-left: 15px;
+}
+
+.profile-location-reviews-rating-line {
+    position: relative;
+    height: 8px;
+    width: 275px;
+    border-radius: 10px;
+    background-color: #eeeeee;
+}
+
+.profile-location-reviews-rating-line-gray {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 8px;
+    width: 275px;
+    border-radius: 10px;
+    background-color: #FDCB1B;
+}
+
+.profile-location-reviews-rating-line-gray-4 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 8px;
+    width: 230px;
+    border-radius: 10px;
+    background-color: #FDCB1B;
+}
+
+.profile-location-reviews-rating-line-gray-3 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 8px;
+    width: 180px;
+    border-radius: 10px;
+    background-color: #FDCB1B;
+}
+
+.profile-location-reviews-rating-line-gray-2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 8px;
+    width: 130px;
+    border-radius: 10px;
+    background-color: #FDCB1B;
+}
+
+.profile-location-reviews-rating-line-gray-1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 8px;
+    width: 70px;
+    border-radius: 10px;
+    background-color: #FDCB1B;
+}
+
+
+.profile-location-reviews-star-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-location-reviews-star-container h5 {
+    font-size: 3rem;
+    font-weight: 500;
+}
+
+.profile-location-reviews-star-innerSection {}
+
+.profile-location-reviews-star-innerSection img {}
+
+.profile-location-reviews-star-container span {
+    color: #828282;
+    font-size: 0.9rem;
+    font-style: normal;
+    font-weight: 300;
+}
+
+
+.profile-location-reviews-writeBtn-conatiner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+.profile-location-reviews-dropdown{
+    margin: 0em !important;
+}
+
+.profile-location-reviews-writeBtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #FD961B;
+    padding: 12px 16px;
+    border-radius: 12px;
+    border: 2px solid #FD961B;
+    background-color: transparent;
+    transition: 0.5s ease-in-out;
+}
+.profile-location-reviews-writeBtn:hover{
+    color: var(--primary-white);
+    background-color: #FD961B;
+}
+
+.profile-location-reviews-writeBtn img {
+    padding-right: 5px;
+}
 
 /* Profile_Location End */

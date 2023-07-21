@@ -143,7 +143,215 @@
                                 <span><img src="./assets/icons/share-black.svg" alt=""></span>
                             </div>
                         </div>
+                        <!-- Lower Tab Start -->
+                        <div class="profile-location-tabs-container">
+                            <div class="tab">
+                                <button class="tablinks" onclick="openCity(event, 'Overview')"
+                                    id="defaultOpen">Overview</button>
+                                <button class="tablinks" onclick="openCity(event, 'Gallery')">Gallery</button>
+                                <button class="tablinks" onclick="openCity(event, 'Reviews')">Reviews</button>
+                                <button class="tablinks" onclick="openCity(event, 'Portfolio')">Portfolio</button>
+                            </div>
+
+                            <div id="Overview" class="tabcontent">
+                                <div class="addBusiness-card-socail-container profile-location-card-socail-container">
+                                    <ul>
+                                        <li><img src="./assets/icons/location-orange.svg" alt=""><a href="#">Manhattan,
+                                                NY
+                                                10036, United States</a></li>
+                                        <li><img src="./assets/icons/world-orange.svg" alt=""><a
+                                                href="#">timessquarenyc.org</a></li>
+                                        <li><img src="./assets/icons/phone-orange.svg" alt=""><a
+                                                href="#">+92300-1234567</a>
+                                        </li>
+                                        <li><img src="./assets/icons/email-orange.svg" alt=""><a
+                                                href="#">timessquarenyc@gmail.com</a></li>
+                                    </ul>
+                                </div>
+                                <p>Forem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie,
+                                    dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem
+                                    sollicitudin lacus, ut interdum tellus elit sed risus. Maecenas eget condimentum
+                                    velit, sit amet feugiat lectus.</p>
+                                <div class="profile-location-ul">
+                                    <li><img src="./assets/icons/tic-orange.svg" alt="">Wheelchair Accessible</li>
+                                    <li><img src="./assets/icons/tic-orange.svg" alt="">Safe for Females/Families</li>
+                                    <li><img src="./assets/icons/tic-orange.svg" alt="">Wheelchair Accessible</li>
+                                    <li><img src="./assets/icons/tic-orange.svg" alt="">Safe for Females/Families</li>
+                                </div>
+                            </div>
+
+                            <div id="Gallery" class="tabcontent">
+                                <div class="profile-location-gallery-container">
+                                    <img src="./assets/img/Rectangle.png" alt="">
+                                    <img src="./assets/img/Rectangle 7 (1).png" alt="">
+                                    <img src="./assets/img/Rectangle 7.png" alt="">
+                                    <img src="./assets/img/Rectangle 8 (1).png" alt="">
+                                    <img src="./assets/img/Rectangle 7.png" alt="">
+                                    <img src="./assets/img/Rectangle.png" alt="">
+                                </div>
+                            </div>
+
+                            <div id="Reviews" class="tabcontent profile-location-reviews-rating-main-container">
+                                <div class="profile-location-reviews-rating-main-Innercontainer">
+                                    <div class="profile-location-reviews-rating-container">
+                                        <div class="profile-location-reviews-rating-section">
+                                            <span>5</span>
+                                            <div class="profile-location-reviews-rating-line-container">
+                                                <div class="profile-location-reviews-rating-line">
+                                                    <div class="profile-location-reviews-rating-line-gray"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="profile-location-reviews-rating-section">
+                                            <span>4</span>
+                                            <div class="profile-location-reviews-rating-line-container">
+                                                <div class="profile-location-reviews-rating-line">
+                                                    <div class="profile-location-reviews-rating-line-gray-4"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="profile-location-reviews-rating-section">
+                                            <span>3</span>
+                                            <div class="profile-location-reviews-rating-line-container">
+                                                <div class="profile-location-reviews-rating-line">
+                                                    <div class="profile-location-reviews-rating-line-gray-3"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="profile-location-reviews-rating-section">
+                                            <span>2</span>
+                                            <div class="profile-location-reviews-rating-line-container">
+                                                <div class="profile-location-reviews-rating-line">
+                                                    <div class="profile-location-reviews-rating-line-gray-2"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="profile-location-reviews-rating-section">
+                                            <span>1</span>
+                                            <div class="profile-location-reviews-rating-line-container">
+                                                <div class="profile-location-reviews-rating-line">
+                                                    <div class="profile-location-reviews-rating-line-gray-1"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="profile-location-reviews-star-container">
+                                        <h5>4.7</h5>
+                                        <div class="profile-location-reviews-star-innerSection">
+                                            <img src="./assets/icons/star.svg" alt="">
+                                            <img src="./assets/icons/star.svg" alt="">
+                                            <img src="./assets/icons/star.svg" alt="">
+                                            <img src="./assets/icons/star-half.svg" alt="">
+                                            <img src="./assets/icons/star-empty.svg" alt="">
+                                        </div>
+                                        <span>(1000 reviews)</span>
+                                    </div>
+                                </div>
+                                <div class="profile-location-reviews-writeBtn-conatiner">
+                                    <button class="profile-location-reviews-writeBtn">
+                                        <img src="./assets/icons/write-orange.svg" alt="">
+                                        Write a review
+                                    </button>
+                                    <div class="addLocationProduct-dropdown profile-location-reviews-dropdown">
+                                        <div class="addLocationProduct-toggle"
+                                            onclick="addLocationProducttoggleDropdown()">
+                                            Sort By <span class="addLocationProduct-arrow"></span>
+                                        </div>
+                                        <div class="addLocationProduct-dropdown-menu">
+                                            <p class="addLocationProduct-option" href="#">Highest Rating</p>
+                                            <p class="addLocationProduct-option" href="#">Lowest Rating</p>
+                                            <p class="addLocationProduct-option" href="#">Relevant</p>
+                                            <p class="addLocationProduct-option" href="#">Newest</p>
+                                            <p class="addLocationProduct-option" href="#">Earlist</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="">
+                                    <div class="">
+                                        <img src="./assets/img/review.png" alt="">
+                                    </div>
+                                    <div class="">
+                                        <h3>John Doe</h3>
+                                        <h5>johndoe@gmail.com</h5>
+                                        <p>This is definitely the hearth and would of the city! If you are in New York,
+                                            you have to go to Times Square, no doubts about it 😍</p>
+                                        <div class="">
+                                            <img src="./assets/img/Rectangle 7 (1).png" alt="">
+                                            <img src="./assets/img/Rectangle 7.png" alt="">
+                                            <img src="./assets/img/Rectangle 8 (1).png" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div id="Portfolio" class="tabcontent">
+                                <div class="addNewItem-box">
+                                    <div class="addNewItem-box-img-container"><img src="./assets/img/Rectangle 8.png"
+                                            alt=""></div>
+                                    <div class="addNewItem-box-text-container">
+                                        <h4>Cosmetic Item</h4>
+                                        <h5>50 $</h5>
+                                        <button class="profile-location-portfolio-buy-btn">Buy</button>
+                                        <p class="addNewItem-p">Torem ipsum dolor sit amet, consectetur adipiscing elit.
+                                            Nunc
+                                            vulputate libero et velit interdum, ac aliquet odio mattis.</p>
+                                    </div>
+                                </div>
+                                <div class="addNewItem-box">
+                                    <div class="addNewItem-box-img-container"><img src="./assets/img/Rectangle 8.png"
+                                            alt=""></div>
+                                    <div class="addNewItem-box-text-container">
+                                        <h4>Cosmetic Item</h4>
+                                        <h5>50 $</h5>
+                                        <button class="profile-location-portfolio-buy-btn">Buy</button>
+                                        <p class="addNewItem-p">Torem ipsum dolor sit amet, consectetur adipiscing elit.
+                                            Nunc
+                                            vulputate libero et velit interdum, ac aliquet odio mattis.</p>
+                                    </div>
+                                </div>
+                                <div class="addNewItem-box">
+                                    <div class="addNewItem-box-img-container"><img src="./assets/img/Rectangle 8.png"
+                                            alt=""></div>
+                                    <div class="addNewItem-box-text-container">
+                                        <h4>Cosmetic Item</h4>
+                                        <h5>50 $</h5>
+                                        <button class="profile-location-portfolio-buy-btn">Buy</button>
+                                        <p class="addNewItem-p">Torem ipsum dolor sit amet, consectetur adipiscing elit.
+                                            Nunc
+                                            vulputate libero et velit interdum, ac aliquet odio mattis.</p>
+                                    </div>
+                                </div>
+                                <div class="addNewItem-box">
+                                    <div class="addNewItem-box-img-container"><img src="./assets/img/Rectangle 8.png"
+                                            alt=""></div>
+                                    <div class="addNewItem-box-text-container">
+                                        <h4>Cosmetic Item</h4>
+                                        <h5>50 $</h5>
+                                        <button class="profile-location-portfolio-buy-btn">Buy</button>
+                                        <p class="addNewItem-p">Torem ipsum dolor sit amet, consectetur adipiscing elit.
+                                            Nunc
+                                            vulputate libero et velit interdum, ac aliquet odio mattis.</p>
+                                    </div>
+                                </div>
+                                <div class="addNewItem-box">
+                                    <div class="addNewItem-box-img-container"><img src="./assets/img/Rectangle 8.png"
+                                            alt=""></div>
+                                    <div class="addNewItem-box-text-container">
+                                        <h4>Cosmetic Item</h4>
+                                        <h5>50 $</h5>
+                                        <button class="profile-location-portfolio-buy-btn">Buy</button>
+                                        <p class="addNewItem-p">Torem ipsum dolor sit amet, consectetur adipiscing elit.
+                                            Nunc
+                                            vulputate libero et velit interdum, ac aliquet odio mattis.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Lower Tab End -->
                     </div>
+
+
 
                 </div>
             </div>
