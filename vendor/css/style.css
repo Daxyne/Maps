@@ -2410,7 +2410,8 @@ input[type="radio"]:checked::before {
     align-items: center;
     margin-top: 10px;
 }
-.profile-location-reviews-dropdown{
+
+.profile-location-reviews-dropdown {
     margin: 0em !important;
 }
 
@@ -2425,13 +2426,120 @@ input[type="radio"]:checked::before {
     background-color: transparent;
     transition: 0.5s ease-in-out;
 }
-.profile-location-reviews-writeBtn:hover{
+
+.profile-location-reviews-writeBtn:hover {
     color: var(--primary-white);
     background-color: #FD961B;
 }
 
 .profile-location-reviews-writeBtn img {
     padding-right: 5px;
+}
+
+
+
+
+.profile-location-user-conatiner {}
+
+.profile-location-user-inner-conatiner {
+    display: flex;
+    margin-top: 20px;
+}
+
+.profile-location-user-img-conatiner {
+    /* position: relative; */
+}
+
+
+.profile-location-user-detail-container {
+    position: relative;
+    padding-left: 20px;
+}
+
+.profile-location-user-detail-container h3 {
+    color: #000100;
+    font-size: 0.9rem;
+    font-weight: 700;
+}
+
+.profile-location-user-detail-container h5 {
+    color: #828282;
+    font-size: 0.8rem;
+    font-weight: 300;
+}
+
+.profile-location-user-verified-icon {
+    width: 16px;
+    height: 16px;
+    top: 3.5px;
+    left: 90px;
+    position: absolute;
+}
+
+.profile-location-user-detail-star-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 3px;
+}
+
+.profile-location-user-detail-star-container img {
+    padding-right: 3px;
+}
+
+.profile-location-user-detail-star-container span {
+    color: #828282;
+    font-size: 0.9rem;
+    font-weight: 100;
+    margin-left: 8px;
+}
+
+.profile-location-user-conatiner p {
+    color: #000100;
+    font-size: 0.9rem;
+    font-weight: 400;
+    margin-top: 5px;
+}
+
+.profile-location-user-detail-img-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 15px;
+    margin: 20px 0px;
+}
+
+.profile-location-user-detail-img-container:nth-child(3) {
+    position: relative;
+}
+
+.profile-location-user-detail-img-container:nth-child(3)::after {
+    content: "+100";
+    right: 0;
+    top: 0;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.80);
+    border-radius: 16px;
+    width: 180px;
+    height: 100%;
+    color: #FFFFFF;
+    font-size: 1.5rem;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-location-user-detail-img-container img {
+    width: 100%;
+}
+
+.profile-location-user-like-span-container {}
+
+.profile-location-user-like-span-container span p {
+    color: #4B4B4B;
+    font-size: 0.8rem;
+    font-weight: 300;
+    margin: 0px 0px 0px 6px;
 }
 
 /* Profile_Location End */
