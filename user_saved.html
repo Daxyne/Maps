@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./vendor/css/style.css">
+    <title>Maps</title>
+</head>
+
+<body>
+    <div class="site-main-container">
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d834511.5061169196!2d-105.02742570039946!3d35.211187128823184!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87185043e79852a9%3A0x46bf6e1a63359eba!2sNew%20Mexico%2C%20USA!5e0!3m2!1sen!2s!4v1688890072315!5m2!1sen!2s"
+            width="100%" height="600" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <div class="site-main-inner-container">
+            <div class="main-leftbar-container">
+                <img src="./assets/logo.svg" alt="">
+                <ul>
+                    <li>
+                        <img src="./assets/icons/home.svg" alt="">
+                        <p>Home</p>
+                    </li>
+                    <li>
+                        <img src="./assets/icons/search.svg" alt="">
+                        <p>Search</p>
+                    </li>
+                    <li>
+                        <img src="./assets/icons/saved.svg" alt="">
+                        <p>Saved</p>
+                    </li>
+                    <li>
+                        <img src="./assets/icons/stats.svg" alt="">
+                        <p>Statistics</p>
+                    </li>
+                    <li>
+                        <img src="./assets/icons/saved.svg" alt="">
+                        <p>Preferences</p>
+                    </li>
+                    <li>
+                        <img src="./assets/icons/addLocation.svg" alt="">
+                        <p>Add Location</p>
+                    </li>
+                </ul>
+                <button class="sidebar-login-btn">
+                    <img src="./assets/icons/user-login.svg" alt="">
+                    <span id="loginButton">Login</span>
+
+                </button>
+                <div id="container" class="main-login-container hidden">
+                    <img src="./assets/icons/cross.svg" class="login-cross" alt="">
+                    <div class="login-container">
+                        <div class="login-section-center">
+                            <div class="login-brand-logo-container">
+                                <img src="./assets/logo.svg" alt="">
+                                <h2>Locator</h2>
+                            </div>
+                            <h3>Welcome Back!</h3>
+                            <h4>Login to your Account</h4>
+                            <div class="login-input-container">
+                                <input type="text" placeholder="Email Address">
+                                <input type="password" placeholder="Password">
+                            </div>
+                            <div class="container-login">
+                                <button class="btn-login">Login</button>
+                                <button class="btn-login-gmail"><img src="./assets/icons/google.svg" alt=""><span>Login
+                                        with
+                                        Google</span></button>
+                                <p>New to Locator? <a href="#">Create New Account</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Search Filter container -->
+            <div class="main-searchFilter-container">
+                <div class="searchFilter-section">
+                    <div class="search-bar">
+                        <input type="text" id="search-business" class="Profile_Location-input"
+                            placeholder="Search location">
+                        <span class="Profile_Location-input-line"></span>
+                        <div class="addLocationProduct-dropdown addBusinessLocation-dropdown Profile_Location-dropdown">
+                            <div class="addLocationProduct-toggle addBusinessLocation-toggle Profile_Location-toggle"
+                                onclick="addLocationProducttoggleDropdown()">
+                                What’s Nearby <span
+                                    class="addLocationProduct-arrow addBusinessLocation-arrow Profile_Location-arrow"></span>
+                            </div>
+                            <div
+                                class="addLocationProduct-dropdown-menu addBusinessLocation-dropdown-menu Profile_Location-dropdown-menu">
+                                <p class="addLocationProduct-option addBusinessLocation-option Profile_Location-option"
+                                    href="#"><img src="./assets/icons/resturants-gray.svg" alt="">Restaurants</p>
+                                <p class="addLocationProduct-option addBusinessLocation-option Profile_Location-option"
+                                    href="#"><img src="./assets/icons/resturants-gray.svg" alt="">Transits</p>
+                                <p class="addLocationProduct-option addBusinessLocation-option Profile_Location-option"
+                                    href="#"><img src="./assets/icons/resturants-gray.svg" alt="">Hotels</p>
+                                <p class="addLocationProduct-option addBusinessLocation-option Profile_Location-option"
+                                    href="#"><img src="./assets/icons/resturants-gray.svg" alt="">Hospitals</p>
+                                <p class="addLocationProduct-option addBusinessLocation-option Profile_Location-option"
+                                    href="#"><img src="./assets/icons/resturants-gray.svg" alt="">Banks</p>
+                                <p class="addLocationProduct-option addBusinessLocation-option Profile_Location-option"
+                                    href="#"><img src="./assets/icons/resturants-gray.svg" alt="">Airports</p>
+                                <p class="addLocationProduct-option addBusinessLocation-option Profile_Location-option"
+                                    href="#"><img src="./assets/icons/resturants-gray.svg" alt="">ATMs</p>
+                                <p class="addLocationProduct-option addBusinessLocation-option Profile_Location-option"
+                                    href="#"><img src="./assets/icons/resturants-gray.svg" alt="">Discover what's around
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="profile-business-location-main-container userSaved-main-container">
+                        <div class="userSaved-title-conatiner">
+                            <h3>Your Saved Places</h3>
+                            <button class="userSaved-newList-btn">
+                                <img src="./assets/icons/plus-orange.svg" alt="">
+                                New List
+                            </button>
+                        </div>
+                        <div class="userSaved-detail-main-conatiner">
+                            <div class="panel" onclick="toggleFullPanel(this)">
+                                <div class="user-travelPlan-container">
+                                    <div class="user-travelPlan-section">
+                                        <img src="./assets/icons/travel.svg" alt="">
+                                        <div class="user-travelPlan-txt-container">
+                                            <h5>Travel Plans</h5>
+                                            <h6>0 Places Saved</h6>
+                                        </div>
+                                    </div>
+                                    <img src="./assets/icons/right-arrow-gray.svg" alt=""
+                                        class="user-travelPlan-arrow-img">
+                                </div>
+
+                                <div class="full-length-panel">
+                                    <span class="back-arrow" onclick="hideFullPanel(this)"><img
+                                            src="./assets/icons/back-arrow-black.svg" alt=""></span>
+                                    <div class="userSaved-title-conatiner userSaved-title-afterClick-conatiner">
+                                        <h3>Travel Plans</h3>
+                                        <button class="userSaved-newList-btn">
+                                            <img src="./assets/icons/plus-orange.svg" alt="">
+                                            New List
+                                        </button>
+                                    </div>
+                                    <!--  -->
+                                    <div class="userSaved-toggle-container">
+                                        <ul>
+                                            <li>
+                                                <div class="checkbox-container">
+                                                    <div class="checkbox"></div>
+                                                    <div class="userProfile-business-location-container">
+                                                        <div class="userProfile-business-location-img-container">
+                                                            <img src="./assets/img/imag.png" alt="">
+                                                        </div>
+                                                        <div class="userProfile-business-location-detail-container">
+                                                            <h5>Times Square, New York, USA</h5>
+                                                            <h6>Manhattan, NY 10036, United States</h6>
+                                                            <div class="userProfile-business-location-rating-container">
+                                                                <span>3.5</span>
+                                                                <div class="userProfile-business-location-rating-star">
+                                                                    <img src="./assets/icons/star.svg" alt="">
+                                                                    <img src="./assets/icons/star.svg" alt="">
+                                                                    <img src="./assets/icons/star.svg" alt="">
+                                                                    <img src="./assets/icons/star-half.svg" alt="">
+                                                                    <img src="./assets/icons/star-empty.svg" alt="">
+                                                                </div>
+                                                                <span>(1000)</span>
+                                                            </div>
+                                                            <p>Plaza</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="checkbox-container">
+                                                    <div class="checkbox"></div>
+                                                    <div class="userProfile-business-location-container">
+                                                        <div class="userProfile-business-location-img-container">
+                                                            <img src="./assets/img/imag.png" alt="">
+                                                        </div>
+                                                        <div class="userProfile-business-location-detail-container">
+                                                            <h5>Times Square, New York, USA</h5>
+                                                            <h6>Manhattan, NY 10036, United States</h6>
+                                                            <div class="userProfile-business-location-rating-container">
+                                                                <span>3.5</span>
+                                                                <div class="userProfile-business-location-rating-star">
+                                                                    <img src="./assets/icons/star.svg" alt="">
+                                                                    <img src="./assets/icons/star.svg" alt="">
+                                                                    <img src="./assets/icons/star.svg" alt="">
+                                                                    <img src="./assets/icons/star-half.svg" alt="">
+                                                                    <img src="./assets/icons/star-empty.svg" alt="">
+                                                                </div>
+                                                                <span>(1000)</span>
+                                                            </div>
+                                                            <p>Plaza</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="checkbox-container">
+                                                    <div class="checkbox"></div>
+                                                    <div class="userProfile-business-location-container">
+                                                        <div class="userProfile-business-location-img-container">
+                                                            <img src="./assets/img/imag.png" alt="">
+                                                        </div>
+                                                        <div class="userProfile-business-location-detail-container">
+                                                            <h5>Times Square, New York, USA</h5>
+                                                            <h6>Manhattan, NY 10036, United States</h6>
+                                                            <div class="userProfile-business-location-rating-container">
+                                                                <span>3.5</span>
+                                                                <div class="userProfile-business-location-rating-star">
+                                                                    <img src="./assets/icons/star.svg" alt="">
+                                                                    <img src="./assets/icons/star.svg" alt="">
+                                                                    <img src="./assets/icons/star.svg" alt="">
+                                                                    <img src="./assets/icons/star-half.svg" alt="">
+                                                                    <img src="./assets/icons/star-empty.svg" alt="">
+                                                                </div>
+                                                                <span>(1000)</span>
+                                                            </div>
+                                                            <p>Plaza</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="checkbox-container">
+                                                    <div class="checkbox"></div>
+                                                    <div class="userProfile-business-location-container">
+                                                        <div class="userProfile-business-location-img-container">
+                                                            <img src="./assets/img/imag.png" alt="">
+                                                        </div>
+                                                        <div class="userProfile-business-location-detail-container">
+                                                            <h5>Times Square, New York, USA</h5>
+                                                            <h6>Manhattan, NY 10036, United States</h6>
+                                                            <div class="userProfile-business-location-rating-container">
+                                                                <span>3.5</span>
+                                                                <div class="userProfile-business-location-rating-star">
+                                                                    <img src="./assets/icons/star.svg" alt="">
+                                                                    <img src="./assets/icons/star.svg" alt="">
+                                                                    <img src="./assets/icons/star.svg" alt="">
+                                                                    <img src="./assets/icons/star-half.svg" alt="">
+                                                                    <img src="./assets/icons/star-empty.svg" alt="">
+                                                                </div>
+                                                                <span>(1000)</span>
+                                                            </div>
+                                                            <p>Plaza</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="checkbox-container">
+                                                    <div class="checkbox"></div>
+                                                    <div class="userProfile-business-location-container">
+                                                        <div class="userProfile-business-location-img-container">
+                                                            <img src="./assets/img/imag.png" alt="">
+                                                        </div>
+                                                        <div class="userProfile-business-location-detail-container">
+                                                            <h5>Times Square, New York, USA</h5>
+                                                            <h6>Manhattan, NY 10036, United States</h6>
+                                                            <div class="userProfile-business-location-rating-container">
+                                                                <span>3.5</span>
+                                                                <div class="userProfile-business-location-rating-star">
+                                                                    <img src="./assets/icons/star.svg" alt="">
+                                                                    <img src="./assets/icons/star.svg" alt="">
+                                                                    <img src="./assets/icons/star.svg" alt="">
+                                                                    <img src="./assets/icons/star-half.svg" alt="">
+                                                                    <img src="./assets/icons/star-empty.svg" alt="">
+                                                                </div>
+                                                                <span>(1000)</span>
+                                                            </div>
+                                                            <p>Plaza</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="checkbox-container">
+                                                    <div class="checkbox"></div>
+                                                    <div class="userProfile-business-location-container">
+                                                        <div class="userProfile-business-location-img-container">
+                                                            <img src="./assets/img/imag.png" alt="">
+                                                        </div>
+                                                        <div class="userProfile-business-location-detail-container">
+                                                            <h5>Times Square, New York, USA</h5>
+                                                            <h6>Manhattan, NY 10036, United States</h6>
+                                                            <div class="userProfile-business-location-rating-container">
+                                                                <span>3.5</span>
+                                                                <div class="userProfile-business-location-rating-star">
+                                                                    <img src="./assets/icons/star.svg" alt="">
+                                                                    <img src="./assets/icons/star.svg" alt="">
+                                                                    <img src="./assets/icons/star.svg" alt="">
+                                                                    <img src="./assets/icons/star-half.svg" alt="">
+                                                                    <img src="./assets/icons/star-empty.svg" alt="">
+                                                                </div>
+                                                                <span>(1000)</span>
+                                                            </div>
+                                                            <p>Plaza</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="panel" onclick="toggleFullPanel(this)">
+                                <div class="user-travelPlan-container">
+                                    <div class="user-travelPlan-section">
+                                        <img src="./assets/icons/saved-heart.svg" alt="">
+                                        <div class="user-travelPlan-txt-container">
+                                            <h5>Favourites</h5>
+                                            <h6>0 Places Saved</h6>
+                                        </div>
+                                    </div>
+                                    <img src="./assets/icons/right-arrow-gray.svg" alt=""
+                                        class="user-travelPlan-arrow-img">
+                                </div>
+                                <div class="full-length-panel">
+                                    <span class="back-arrow" onclick="hideFullPanel(this)"><img
+                                            src="./assets/icons/back-arrow-black.svg" alt=""></span>
+                                    <div class="userSaved-title-conatiner userSaved-title-afterClick-conatiner">
+                                        <h3>Travel Plans</h3>
+                                        <button class="userSaved-newList-btn">
+                                            <img src="./assets/icons/plus-orange.svg" alt="">
+                                            New List
+                                        </button>
+                                    </div>
+                                    <!--  -->
+                                    <div class="userSaved-toggle-container">
+                                        <ul>
+                                            <li>
+                                                <div class="checkbox-container">
+                                                    <div class="checkbox"></div>
+                                                    <div class="userProfile-business-location-container">
+                                                        <div class="userProfile-business-location-img-container">
+                                                            <img src="./assets/img/imag.png" alt="">
+                                                        </div>
+                                                        <div class="userProfile-business-location-detail-container">
+                                                            <h5>Times Square, New York, USA</h5>
+                                                            <h6>Manhattan, NY 10036, United States</h6>
+                                                            <div class="userProfile-business-location-rating-container">
+                                                                <span>3.5</span>
+                                                                <div class="userProfile-business-location-rating-star">
+                                                                    <img src="./assets/icons/star.svg" alt="">
+                                                                    <img src="./assets/icons/star.svg" alt="">
+                                                                    <img src="./assets/icons/star.svg" alt="">
+                                                                    <img src="./assets/icons/star-half.svg" alt="">
+                                                                    <img src="./assets/icons/star-empty.svg" alt="">
+                                                                </div>
+                                                                <span>(1000)</span>
+                                                            </div>
+                                                            <p>Plaza</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="checkbox-container">
+                                                    <div class="checkbox"></div>
+                                                    <div class="userProfile-business-location-container">
+                                                        <div class="userProfile-business-location-img-container">
+                                                            <img src="./assets/img/imag.png" alt="">
+                                                        </div>
+                                                        <div class="userProfile-business-location-detail-container">
+                                                            <h5>Times Square, New York, USA</h5>
+                                                            <h6>Manhattan, NY 10036, United States</h6>
+                                                            <div class="userProfile-business-location-rating-container">
+                                                                <span>3.5</span>
+                                                                <div class="userProfile-business-location-rating-star">
+                                                                    <img src="./assets/icons/star.svg" alt="">
+                                                                    <img src="./assets/icons/star.svg" alt="">
+                                                                    <img src="./assets/icons/star.svg" alt="">
+                                                                    <img src="./assets/icons/star-half.svg" alt="">
+                                                                    <img src="./assets/icons/star-empty.svg" alt="">
+                                                                </div>
+                                                                <span>(1000)</span>
+                                                            </div>
+                                                            <p>Plaza</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="checkbox-container">
+                                                    <div class="checkbox"></div>
+                                                    <div class="userProfile-business-location-container">
+                                                        <div class="userProfile-business-location-img-container">
+                                                            <img src="./assets/img/imag.png" alt="">
+                                                        </div>
+                                                        <div class="userProfile-business-location-detail-container">
+                                                            <h5>Times Square, New York, USA</h5>
+                                                            <h6>Manhattan, NY 10036, United States</h6>
+                                                            <div class="userProfile-business-location-rating-container">
+                                                                <span>3.5</span>
+                                                                <div class="userProfile-business-location-rating-star">
+                                                                    <img src="./assets/icons/star.svg" alt="">
+                                                                    <img src="./assets/icons/star.svg" alt="">
+                                                                    <img src="./assets/icons/star.svg" alt="">
+                                                                    <img src="./assets/icons/star-half.svg" alt="">
+                                                                    <img src="./assets/icons/star-empty.svg" alt="">
+                                                                </div>
+                                                                <span>(1000)</span>
+                                                            </div>
+                                                            <p>Plaza</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="checkbox-container">
+                                                    <div class="checkbox"></div>
+                                                    <div class="userProfile-business-location-container">
+                                                        <div class="userProfile-business-location-img-container">
+                                                            <img src="./assets/img/imag.png" alt="">
+                                                        </div>
+                                                        <div class="userProfile-business-location-detail-container">
+                                                            <h5>Times Square, New York, USA</h5>
+                                                            <h6>Manhattan, NY 10036, United States</h6>
+                                                            <div class="userProfile-business-location-rating-container">
+                                                                <span>3.5</span>
+                                                                <div class="userProfile-business-location-rating-star">
+                                                                    <img src="./assets/icons/star.svg" alt="">
+                                                                    <img src="./assets/icons/star.svg" alt="">
+                                                                    <img src="./assets/icons/star.svg" alt="">
+                                                                    <img src="./assets/icons/star-half.svg" alt="">
+                                                                    <img src="./assets/icons/star-empty.svg" alt="">
+                                                                </div>
+                                                                <span>(1000)</span>
+                                                            </div>
+                                                            <p>Plaza</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="checkbox-container">
+                                                    <div class="checkbox"></div>
+                                                    <div class="userProfile-business-location-container">
+                                                        <div class="userProfile-business-location-img-container">
+                                                            <img src="./assets/img/imag.png" alt="">
+                                                        </div>
+                                                        <div class="userProfile-business-location-detail-container">
+                                                            <h5>Times Square, New York, USA</h5>
+                                                            <h6>Manhattan, NY 10036, United States</h6>
+                                                            <div class="userProfile-business-location-rating-container">
+                                                                <span>3.5</span>
+                                                                <div class="userProfile-business-location-rating-star">
+                                                                    <img src="./assets/icons/star.svg" alt="">
+                                                                    <img src="./assets/icons/star.svg" alt="">
+                                                                    <img src="./assets/icons/star.svg" alt="">
+                                                                    <img src="./assets/icons/star-half.svg" alt="">
+                                                                    <img src="./assets/icons/star-empty.svg" alt="">
+                                                                </div>
+                                                                <span>(1000)</span>
+                                                            </div>
+                                                            <p>Plaza</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="checkbox-container">
+                                                    <div class="checkbox"></div>
+                                                    <div class="userProfile-business-location-container">
+                                                        <div class="userProfile-business-location-img-container">
+                                                            <img src="./assets/img/imag.png" alt="">
+                                                        </div>
+                                                        <div class="userProfile-business-location-detail-container">
+                                                            <h5>Times Square, New York, USA</h5>
+                                                            <h6>Manhattan, NY 10036, United States</h6>
+                                                            <div class="userProfile-business-location-rating-container">
+                                                                <span>3.5</span>
+                                                                <div class="userProfile-business-location-rating-star">
+                                                                    <img src="./assets/icons/star.svg" alt="">
+                                                                    <img src="./assets/icons/star.svg" alt="">
+                                                                    <img src="./assets/icons/star.svg" alt="">
+                                                                    <img src="./assets/icons/star-half.svg" alt="">
+                                                                    <img src="./assets/icons/star-empty.svg" alt="">
+                                                                </div>
+                                                                <span>(1000)</span>
+                                                            </div>
+                                                            <p>Plaza</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="panel" onclick="toggleFullPanel(this)">
+                                <div class="user-travelPlan-container">
+                                    <div class="user-travelPlan-section">
+                                        <img src="./assets/icons/plan.svg" alt="">
+                                        <div class="user-travelPlan-txt-container">
+                                            <h5>Plan to Go</h5>
+                                            <h6>0 Places Saved</h6>
+                                        </div>
+                                    </div>
+                                    <img src="./assets/icons/right-arrow-gray.svg" alt=""
+                                        class="user-travelPlan-arrow-img">
+                                </div>
+                                <div class="full-length-panel">
+                                    <span class="back-arrow" onclick="hideFullPanel(this)"><img
+                                            src="./assets/icons/back-arrow-black.svg" alt=""></span>
+                                    <div class="userSaved-title-conatiner userSaved-title-afterClick-conatiner">
+                                        <h3>Travel Plans</h3>
+                                        <button class="userSaved-newList-btn">
+                                            <img src="./assets/icons/plus-orange.svg" alt="">
+                                            New List
+                                        </button>
+                                    </div>
+                                    <!--  -->
+                                    <div class="userSaved-toggle-container">
+                                        <ul>
+                                            <li>
+                                                <div class="checkbox-container">
+                                                    <div class="checkbox"></div>
+                                                    <div class="userProfile-business-location-container">
+                                                        <div class="userProfile-business-location-img-container">
+                                                            <img src="./assets/img/imag.png" alt="">
+                                                        </div>
+                                                        <div class="userProfile-business-location-detail-container">
+                                                            <h5>Times Square, New York, USA</h5>
+                                                            <h6>Manhattan, NY 10036, United States</h6>
+                                                            <div class="userProfile-business-location-rating-container">
+                                                                <span>3.5</span>
+                                                                <div class="userProfile-business-location-rating-star">
+                                                                    <img src="./assets/icons/star.svg" alt="">
+                                                                    <img src="./assets/icons/star.svg" alt="">
+                                                                    <img src="./assets/icons/star.svg" alt="">
+                                                                    <img src="./assets/icons/star-half.svg" alt="">
+                                                                    <img src="./assets/icons/star-empty.svg" alt="">
+                                                                </div>
+                                                                <span>(1000)</span>
+                                                            </div>
+                                                            <p>Plaza</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="checkbox-container">
+                                                    <div class="checkbox"></div>
+                                                    <div class="userProfile-business-location-container">
+                                                        <div class="userProfile-business-location-img-container">
+                                                            <img src="./assets/img/imag.png" alt="">
+                                                        </div>
+                                                        <div class="userProfile-business-location-detail-container">
+                                                            <h5>Times Square, New York, USA</h5>
+                                                            <h6>Manhattan, NY 10036, United States</h6>
+                                                            <div class="userProfile-business-location-rating-container">
+                                                                <span>3.5</span>
+                                                                <div class="userProfile-business-location-rating-star">
+                                                                    <img src="./assets/icons/star.svg" alt="">
+                                                                    <img src="./assets/icons/star.svg" alt="">
+                                                                    <img src="./assets/icons/star.svg" alt="">
+                                                                    <img src="./assets/icons/star-half.svg" alt="">
+                                                                    <img src="./assets/icons/star-empty.svg" alt="">
+                                                                </div>
+                                                                <span>(1000)</span>
+                                                            </div>
+                                                            <p>Plaza</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="checkbox-container">
+                                                    <div class="checkbox"></div>
+                                                    <div class="userProfile-business-location-container">
+                                                        <div class="userProfile-business-location-img-container">
+                                                            <img src="./assets/img/imag.png" alt="">
+                                                        </div>
+                                                        <div class="userProfile-business-location-detail-container">
+                                                            <h5>Times Square, New York, USA</h5>
+                                                            <h6>Manhattan, NY 10036, United States</h6>
+                                                            <div class="userProfile-business-location-rating-container">
+                                                                <span>3.5</span>
+                                                                <div class="userProfile-business-location-rating-star">
+                                                                    <img src="./assets/icons/star.svg" alt="">
+                                                                    <img src="./assets/icons/star.svg" alt="">
+                                                                    <img src="./assets/icons/star.svg" alt="">
+                                                                    <img src="./assets/icons/star-half.svg" alt="">
+                                                                    <img src="./assets/icons/star-empty.svg" alt="">
+                                                                </div>
+                                                                <span>(1000)</span>
+                                                            </div>
+                                                            <p>Plaza</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="checkbox-container">
+                                                    <div class="checkbox"></div>
+                                                    <div class="userProfile-business-location-container">
+                                                        <div class="userProfile-business-location-img-container">
+                                                            <img src="./assets/img/imag.png" alt="">
+                                                        </div>
+                                                        <div class="userProfile-business-location-detail-container">
+                                                            <h5>Times Square, New York, USA</h5>
+                                                            <h6>Manhattan, NY 10036, United States</h6>
+                                                            <div class="userProfile-business-location-rating-container">
+                                                                <span>3.5</span>
+                                                                <div class="userProfile-business-location-rating-star">
+                                                                    <img src="./assets/icons/star.svg" alt="">
+                                                                    <img src="./assets/icons/star.svg" alt="">
+                                                                    <img src="./assets/icons/star.svg" alt="">
+                                                                    <img src="./assets/icons/star-half.svg" alt="">
+                                                                    <img src="./assets/icons/star-empty.svg" alt="">
+                                                                </div>
+                                                                <span>(1000)</span>
+                                                            </div>
+                                                            <p>Plaza</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="checkbox-container">
+                                                    <div class="checkbox"></div>
+                                                    <div class="userProfile-business-location-container">
+                                                        <div class="userProfile-business-location-img-container">
+                                                            <img src="./assets/img/imag.png" alt="">
+                                                        </div>
+                                                        <div class="userProfile-business-location-detail-container">
+                                                            <h5>Times Square, New York, USA</h5>
+                                                            <h6>Manhattan, NY 10036, United States</h6>
+                                                            <div class="userProfile-business-location-rating-container">
+                                                                <span>3.5</span>
+                                                                <div class="userProfile-business-location-rating-star">
+                                                                    <img src="./assets/icons/star.svg" alt="">
+                                                                    <img src="./assets/icons/star.svg" alt="">
+                                                                    <img src="./assets/icons/star.svg" alt="">
+                                                                    <img src="./assets/icons/star-half.svg" alt="">
+                                                                    <img src="./assets/icons/star-empty.svg" alt="">
+                                                                </div>
+                                                                <span>(1000)</span>
+                                                            </div>
+                                                            <p>Plaza</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="checkbox-container">
+                                                    <div class="checkbox"></div>
+                                                    <div class="userProfile-business-location-container">
+                                                        <div class="userProfile-business-location-img-container">
+                                                            <img src="./assets/img/imag.png" alt="">
+                                                        </div>
+                                                        <div class="userProfile-business-location-detail-container">
+                                                            <h5>Times Square, New York, USA</h5>
+                                                            <h6>Manhattan, NY 10036, United States</h6>
+                                                            <div class="userProfile-business-location-rating-container">
+                                                                <span>3.5</span>
+                                                                <div class="userProfile-business-location-rating-star">
+                                                                    <img src="./assets/icons/star.svg" alt="">
+                                                                    <img src="./assets/icons/star.svg" alt="">
+                                                                    <img src="./assets/icons/star.svg" alt="">
+                                                                    <img src="./assets/icons/star-half.svg" alt="">
+                                                                    <img src="./assets/icons/star-empty.svg" alt="">
+                                                                </div>
+                                                                <span>(1000)</span>
+                                                            </div>
+                                                            <p>Plaza</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                </div>
+            </div>
+            <!-- Search Filter container -->
+
+        </div>
+    </div>
+    <!-- Scripts -->
+    <script src="./vendor/js/app.js"></script>
+
+</body>
+
+</html>

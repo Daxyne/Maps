@@ -1,3 +1,21 @@
+/* User_saved Toggle Start */ 
+function toggleFullPanel(panel) {
+  const panels = document.querySelectorAll('.panel');
+  panels.forEach((p) => p.classList.remove('active'));
+  panel.classList.add('active');
+}
+
+function hideFullPanel(arrow) {
+  const fullPanel = arrow.closest('.full-length-panel');
+  fullPanel.classList.add('hide-animation');
+  setTimeout(() => {
+    fullPanel.parentElement.classList.remove('active');
+    fullPanel.classList.remove('hide-animation');
+  }, 300);
+}
+/* User_saved Toggle end */ 
+
+
 /* Profile_Location_Tabs Start */
 function openCity(evt, cityName) {
   var i, tabcontent, tablinks;

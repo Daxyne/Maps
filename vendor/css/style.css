@@ -2543,3 +2543,171 @@ input[type="radio"]:checked::before {
 }
 
 /* Profile_Location End */
+
+/* User_Saved Start */
+.userSaved-main-container {
+    position: relative;
+    height: 150vh;
+}
+
+.userSaved-title-conatiner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.userSaved-title-conatiner h3 {
+    color: #000100;
+    font-size: 1.2rem;
+    font-style: normal;
+    font-weight: 700;
+}
+
+.userSaved-newList-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #FD961B;
+    font-size: 0.9rem;
+    font-weight: 300;
+    padding: 10px 12px;
+    border-radius: 12px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.userSaved-newList-btn img {
+    margin-right: 5px;
+}
+
+.userSaved-detail-main-conatiner {
+    padding-top: 20px;
+}
+
+.panel {
+    width: 100%;
+    cursor: pointer;
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+.panel:hover {
+    background-color: #F1F5F9;
+}
+
+.user-travelPlan-container {
+    position: relative;
+}
+
+.user-travelPlan-section {
+    display: flex;
+    align-items: center;
+    padding: 24px 16px;
+}
+
+
+.user-travelPlan-section img {}
+
+.user-travelPlan-txt-container {
+    padding-left: 15px;
+}
+
+.user-travelPlan-txt-container h5 {
+    color: #000100;
+    font-size: 1.1rem;
+    font-style: normal;
+    font-weight: 500;
+}
+
+.user-travelPlan-txt-container h6 {
+    color: #828282;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 300;
+}
+
+.user-travelPlan-arrow-img {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 30px;
+    right: 10px;
+}
+
+
+.full-length-panel {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--primary-white);
+    border-radius: 12px;
+    color: #fff;
+    padding: 14px;
+    transform: translateX(100%);
+    transition: transform 0.5s ease;
+    z-index: -1;
+}
+
+.panel.active .full-length-panel {
+    transform: translateX(0);
+    z-index: 1;
+}
+
+.back-arrow {
+    position: absolute;
+    top: 17px;
+    left: 20px;
+    cursor: pointer;
+    font-size: 24px;
+}
+
+.back-arrow img {
+    width: 18px;
+    height: 18px;
+}
+
+.userSaved-title-afterClick-conatiner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 35px;
+}
+
+.hide-animation {
+    animation: hidePanel 0.5s ease;
+}
+
+@keyframes hidePanel {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(100%);
+    }
+}
+
+
+.userSaved-toggle-container {
+    padding-top: 40px;
+}
+
+.userSaved-toggle-container ul {}
+
+.userSaved-toggle-container ul li {
+    padding-left: 10px;
+    margin-top: 5px;
+    margin-bottom: 0px !important;
+    transition: 0.5s ease-in-out;
+    border-radius: 12px;
+}
+
+.userSaved-toggle-container ul li:hover {
+    background-color: #F2F3EE;
+}
+
+/* User_Saved End */
