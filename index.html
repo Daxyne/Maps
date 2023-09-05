@@ -64,8 +64,9 @@
                             </div>
                             <div class="container-login">
                                 <button class="btn-login">Login</button>
-                                <button class="btn-login-gmail"><img src="./assets/icons/google.svg" alt=""><span>Login with
-                                    Google</span></button>
+                                <button class="btn-login-gmail"><img src="./assets/icons/google.svg" alt=""><span>Login
+                                        with
+                                        Google</span></button>
                                 <p>New to Locator? <a href="#">Create New Account</a></p>
                             </div>
                         </div>
@@ -73,28 +74,45 @@
                 </div>
             </div>
             <!-- Search Filter container -->
-            <div class="main-searchFilter-container">
+            <div class="main-Home-Collapsed-searchFilter-container">
                 <div class="searchFilter-section">
                     <div class="search-bar">
-                        <input type="text" id="search-business" placeholder="Search by business"
-                            onclick="toggleDropdown('business')">
-                        <input type="text" id="search-location" placeholder="Search by location"
-                            onclick="toggleDropdown('location')">
-                        <select id="nearby-options">
-                            <option value="">What's Nearby</option>
-                            <option value="restaurants">Restaurants</option>
-                            <option value="hotels">Hotels</option>
-                            <option value="parks">Parks</option>
-                        </select>
+                        <input type="text" id="search-business" class="Home-Collapsed-input"
+                            placeholder="Search by Business">
+                        <span class="Home-Collapsed-input-line"></span>
+                        <input type="text" id="search-business" class="Home-Collapsed-input"
+                            placeholder="Search by Location">
+                        <div class="Home-Collapsed-dropdown addBusinessLocation-dropdown Profile_Location-dropdown">
+                            <div class="addLocationProduct-toggle addBusinessLocation-toggle Profile_Location-toggle"
+                                onclick="addLocationProducttoggleDropdown()">
+                                What’s Nearby <span
+                                    class="addLocationProduct-arrow addBusinessLocation-arrow Profile_Location-arrow"></span>
+                            </div>
+                            <div
+                                class="addLocationProduct-dropdown-menu addBusinessLocation-dropdown-menu Profile_Location-dropdown-menu">
+                                <p class="addLocationProduct-option addBusinessLocation-option Profile_Location-option"
+                                    href="#"><img src="./assets/icons/resturants-gray.svg" alt="">Restaurants</p>
+                                <p class="addLocationProduct-option addBusinessLocation-option Profile_Location-option"
+                                    href="#"><img src="./assets/icons/resturants-gray.svg" alt="">Transits</p>
+                                <p class="addLocationProduct-option addBusinessLocation-option Profile_Location-option"
+                                    href="#"><img src="./assets/icons/resturants-gray.svg" alt="">Hotels</p>
+                                <p class="addLocationProduct-option addBusinessLocation-option Profile_Location-option"
+                                    href="#"><img src="./assets/icons/resturants-gray.svg" alt="">Hospitals</p>
+                                <p class="addLocationProduct-option addBusinessLocation-option Profile_Location-option"
+                                    href="#"><img src="./assets/icons/resturants-gray.svg" alt="">Banks</p>
+                                <p class="addLocationProduct-option addBusinessLocation-option Profile_Location-option"
+                                    href="#"><img src="./assets/icons/resturants-gray.svg" alt="">Airports</p>
+                                <p class="addLocationProduct-option addBusinessLocation-option Profile_Location-option"
+                                    href="#"><img src="./assets/icons/resturants-gray.svg" alt="">ATMs</p>
+                                <p class="addLocationProduct-option addBusinessLocation-option Profile_Location-option"
+                                    href="#"><img src="./assets/icons/resturants-gray.svg" alt="">Discover what's around
+                                </p>
+                            </div>
+                        </div>
                     </div>
 
-                    <!-- <div id="dropdown-container"> -->
-                    <!-- Suggested options go here -->
-                    <!-- </div> -->
 
-                    <!-- <div id="search-results"> -->
-                    <!-- Display search results here -->
-                    <!-- </div> -->
+
                 </div>
             </div>
             <!-- Search Filter container -->
