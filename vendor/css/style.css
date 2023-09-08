@@ -132,6 +132,9 @@ body {
     background-color: var(--primary-white);
     color: #101010;
 }
+.loginButton a{
+    color: var(--primary-white);
+}
 
 .sidebar-login-btn span {
     margin-left: 5px;
@@ -413,11 +416,12 @@ select {
     bottom: 20px;
     background-color: transparent;
     border: none;
+    cursor: pointer;
 }
 
 .sidebar-logout-btn:hover {
-    background-color: var(--primary-white);
-    color: #101010;
+    /* background-color: var(--primary-white); */
+    /* color: #101010; */
 }
 
 .sidebar-logout-btn span {
@@ -552,7 +556,8 @@ select {
 }
 
 .addLocation-item-section-center {
-    padding-top: 60px;
+    padding-top: 200px;
+    width: 50%;
 }
 
 .addLocation-item-section-center h2 {
@@ -560,13 +565,14 @@ select {
     font-size: 2rem;
     font-style: normal;
     font-weight: 700;
+    text-align: center;
 }
 
 .addLocation-item-input-container {
     display: grid;
     margin: auto;
     padding: 2.5em 0em 0em 0em;
-    width: 50%;
+    width: 100%;
 }
 
 .addLocation-item-input-container h3 {
@@ -2831,7 +2837,6 @@ input[type="radio"]:checked::before {
 
 /* Comparison_States Start */
 .main-rightbar-ComparisonStates-container {
-    border: 1px solid red;
     width: 100%;
     padding: 6rem 4rem 3rem 3.2rem;
 }
@@ -2869,7 +2874,6 @@ input[type="radio"]:checked::before {
     grid-template-columns: repeat(3, 1fr);
     grid-column-gap: 70px;
     margin-top: 30px;
-    border: 1px solid red;
 
 }
 

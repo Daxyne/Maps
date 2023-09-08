@@ -1,6 +1,0 @@
-comp1
-comp2
-stats 03
-Login
-signup
-
