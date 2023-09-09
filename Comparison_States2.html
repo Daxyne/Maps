@@ -5,30 +5,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script type="text/javascript">
-        google.charts.load('current', { 'packages': ['bar'] });
+        google.charts.load('current', { 'packages': ['corechart'] });
         google.charts.setOnLoadCallback(drawChart);
 
         function drawChart() {
             var data = google.visualization.arrayToDataTable([
-                ['Year', 'Sales', 'Expenses', 'Profit'],
-                ['2014', 1000, 400, 200],
-                ['2015', 1170, 460, 250],
-                ['2016', 660, 1120, 300],
-                ['2017', 1030, 540, 350]
+                ['Year', 'Sales', 'Expenses'],
+                ['2004', 1000, 400],
+                ['2005', 1170, 460],
+                ['2006', 660, 1120],
+                ['2007', 1030, 540]
             ]);
 
             var options = {
-                chart: {
-                    title: 'Company Performance',
-                    subtitle: 'Sales, Expenses, and Profit: 2014-2017',
-                },
-                colors: ['#000000', '#FD961B', '#be761d'] // Specify your desired colors here
+                title: 'Company Performance',
+                curveType: 'function',
+                legend: { position: 'bottom' }
+                ,
+                colors: ['#000000', '#FD961B']
             };
 
-            var chart = new google.charts.Bar(document.getElementById('columnchart_material'));
+            var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
 
-            chart.draw(data, google.charts.Bar.convertOptions(options));
+            chart.draw(data, options);
         }
     </script>
     <link rel="stylesheet" href="./vendor/css/style.css">
@@ -157,8 +158,7 @@
                     </div>
                     <h5>KFC vs St. Joseph Hospital</h5>
                     <!-- <div class="ComparisonStates-graph-main-container"></div> -->
-                    <div id="columnchart_material" class="ComparisonStates-graph-main-container"
-                        style="width: 100%; height: 500px;"></div>
+                        <div id="curve_chart" style="width: 100%; height: 500px" class="ComparisonStates-graph-main-container"></div>
                 </div>
             </div>
         </div>
