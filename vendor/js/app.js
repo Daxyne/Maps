@@ -1,4 +1,4 @@
-/* User_saved Toggle Start */ 
+/* User_saved Toggle Start */
 function toggleFullPanel(panel) {
   const panels = document.querySelectorAll('.panel');
   panels.forEach((p) => p.classList.remove('active'));
@@ -13,25 +13,10 @@ function hideFullPanel(arrow) {
     fullPanel.classList.remove('hide-animation');
   }, 300);
 }
-/* User_saved Toggle end */ 
+/* User_saved Toggle end */
 
 
-/* Profile_Location_Tabs Start */
-function openCity(evt, cityName) {
-  var i, tabcontent, tablinks;
-  tabcontent = document.getElementsByClassName("tabcontent");
-  for (i = 0; i < tabcontent.length; i++) {
-    tabcontent[i].style.display = "none";
-  }
-  tablinks = document.getElementsByClassName("tablinks");
-  for (i = 0; i < tablinks.length; i++) {
-    tablinks[i].className = tablinks[i].className.replace(" active", "");
-  }
-  document.getElementById(cityName).style.display = "block";
-  evt.currentTarget.className += " active";
-}
-document.getElementById("defaultOpen").click();
-/* Profile_Location_Tabs End */
+
 
 
 /* DashboardSetting Checkbox Start */
@@ -62,6 +47,10 @@ dropdownOptions.forEach(function (option) {
     dropdownToggle.textContent = selectedOptionText;
     dropdownToggle.classList.remove('open');
     dropdownToggle.insertAdjacentHTML('beforeend', '<span class="addLocationProduct-arrow"></span>');
+
+    // Set the value for the first input
+    document.getElementById('firstDropdownValue').value = selectedOptionText;
+    console.log(selectedOptionText);
   });
 });
 /* addLocationProduct End */
@@ -150,3 +139,21 @@ loginCross.addEventListener("click", (event) => {
 });
 /* Login End */
 
+
+
+/* Profile_Location_Tabs Start */
+function openCity(evt, cityName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+document.getElementById("defaultOpen").click();
+/* Profile_Location_Tabs End */
